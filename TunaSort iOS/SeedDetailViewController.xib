@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeedDetailViewController" customModule="TunaSort_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="playButton" destination="faD-LY-rR4" id="qYe-Cx-oDX"/>
+                <outlet property="seedImage" destination="ekQ-35-zql" id="9EX-lF-Gg3"/>
+                <outlet property="seedSubtitle" destination="vqQ-ui-ZPT" id="Xun-7e-ixP"/>
+                <outlet property="seedTitle" destination="t2W-UW-geF" id="8IW-4N-pTb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-e4-nZU">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="outsideTapped:" destination="-1" eventType="touchUpInside" id="GLR-Ci-a9r"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6g-wu-eje" userLabel="Alert Container">
+                    <rect key="frame" x="20" y="356" width="353" height="140"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_album" translatesAutoresizingMaskIntoConstraints="NO" id="ekQ-35-zql" userLabel="Seed Image">
+                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Dr7-7u-8Qr"/>
+                                <constraint firstAttribute="width" constant="80" id="xQc-Ay-1b4"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Xb-vn-58f">
+                            <rect key="frame" x="100" y="24.666666666666682" width="203" height="50.666666666666657"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2W-UW-geF" userLabel="Seed Title">
+                                    <rect key="frame" x="0.0" y="0.0" width="203" height="25.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <color key="textColor" name="TS_white"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtítulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqQ-ui-ZPT" userLabel="Seed Subtitle">
+                                    <rect key="frame" x="0.0" y="30.333333333333314" width="203" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="TS_white"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whj-C6-ItX">
+                            <rect key="frame" x="271.33333333333331" y="99" width="71.666666666666686" height="31"/>
+                            <color key="tintColor" name="TS_green"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="EDITAR">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="editButtonTapped:" destination="-1" eventType="touchUpInside" id="cNj-gR-NpX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVt-c2-Rv6">
+                            <rect key="frame" x="173.33333333333334" y="99" width="88.000000000000028" height="31"/>
+                            <color key="tintColor" name="TS_green"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="ELIMINAR">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="deleteButtonTapped:" destination="-1" eventType="touchUpInside" id="jhr-td-oOE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faD-LY-rR4" userLabel="Play Button">
+                            <rect key="frame" x="313" y="35" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="W8f-50-Ynu"/>
+                                <constraint firstAttribute="height" constant="30" id="ehV-x8-MX8"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system">
+                                <color key="baseForegroundColor" name="TS_white"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="mmH-q6-e2O"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="TS_dark_gray"/>
+                    <constraints>
+                        <constraint firstItem="ekQ-35-zql" firstAttribute="leading" secondItem="s6g-wu-eje" secondAttribute="leading" constant="10" id="0AB-WT-eMx"/>
+                        <constraint firstItem="3Xb-vn-58f" firstAttribute="leading" secondItem="ekQ-35-zql" secondAttribute="trailing" constant="10" id="3xr-3f-TEi"/>
+                        <constraint firstAttribute="bottom" secondItem="lVt-c2-Rv6" secondAttribute="bottom" constant="10" id="Bda-Zg-zHL"/>
+                        <constraint firstItem="faD-LY-rR4" firstAttribute="leading" secondItem="3Xb-vn-58f" secondAttribute="trailing" constant="10" id="CZu-3n-xvg"/>
+                        <constraint firstItem="3Xb-vn-58f" firstAttribute="centerY" secondItem="s6g-wu-eje" secondAttribute="centerY" constant="-20" id="DJg-5B-BfA"/>
+                        <constraint firstAttribute="trailing" secondItem="faD-LY-rR4" secondAttribute="trailing" constant="10" id="FYv-R1-kPq"/>
+                        <constraint firstAttribute="trailing" secondItem="whj-C6-ItX" secondAttribute="trailing" constant="10" id="Wfj-Ud-AwY"/>
+                        <constraint firstItem="ekQ-35-zql" firstAttribute="centerY" secondItem="s6g-wu-eje" secondAttribute="centerY" constant="-20" id="YQa-Pq-tgE"/>
+                        <constraint firstItem="faD-LY-rR4" firstAttribute="centerY" secondItem="s6g-wu-eje" secondAttribute="centerY" constant="-20" id="i1N-WD-9rs"/>
+                        <constraint firstAttribute="bottom" secondItem="whj-C6-ItX" secondAttribute="bottom" constant="10" id="kDi-bg-gdq"/>
+                        <constraint firstAttribute="height" constant="140" id="s2Y-JK-COv"/>
+                        <constraint firstItem="whj-C6-ItX" firstAttribute="leading" secondItem="lVt-c2-Rv6" secondAttribute="trailing" constant="10" id="zi3-37-p9j"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="FBr-e4-nZU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7z9-tD-F9F"/>
+                <constraint firstItem="s6g-wu-eje" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SFP-Ao-dwx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s6g-wu-eje" secondAttribute="trailing" constant="20" id="gw6-XD-otS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FBr-e4-nZU" secondAttribute="trailing" id="hhf-zk-TPt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FBr-e4-nZU" secondAttribute="bottom" id="kia-q0-SJV"/>
+                <constraint firstItem="FBr-e4-nZU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tXj-p6-5LA"/>
+                <constraint firstItem="s6g-wu-eje" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uRG-mJ-gfm"/>
+            </constraints>
+            <point key="canvasLocation" x="-127.48091603053435" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_album" width="1024" height="1024"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <namedColor name="TS_dark_gray">
+            <color red="0.25882352941176473" green="0.28627450980392155" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TS_green">
+            <color red="0.20392156862745098" green="0.8901960784313725" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TS_white">
+            <color red="0.88627450980392153" green="0.8901960784313725" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

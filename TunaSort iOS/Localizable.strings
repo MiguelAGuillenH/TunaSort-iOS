@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  TunaSort iOS
+
+  Created by MAGH on 17/07/24.
+  
+*/
+
+/* Seed types */
+"seed.type.artist" = "Artista";
+"seed.type.genre" = "Género	";
+"seed.type.track" = "Canción";
+
+/* Empty search results messages */
+"message.search.query_required" = "Para realizar una búsqueda, escribe algo en el campo.";
+"message.search.no_results" = "No se encontraron resultados. Intenta realizar otra búsqueda.";

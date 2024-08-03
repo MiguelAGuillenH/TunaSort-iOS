@@ -1,0 +1,18 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "Respresso"
+  },
+  "colors" : [ {
+    "color" : {
+      "colorSpace" : "srgb",
+      "components" : {
+        "red" : "0x8B",
+        "green" : "0x93",
+        "blue" : "0x89",
+        "alpha" : "1.0"
+      }
+    },
+    "idiom" : "universal"
+  } ]
+}
